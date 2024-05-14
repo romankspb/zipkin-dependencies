@@ -146,7 +146,7 @@ You can use the following command to display what this project is built against:
 ```bash
 $ SPARK_VERSION=$(./mvnw help:evaluate -Dexpression=spark.version -q -DforceStdout)
 $ echo $SPARK_VERSION
-3.3.4
+3.5.1
 ```
 
 Once you've verified your setup is on the correct version, set the `SPARK_MASTER` variable:

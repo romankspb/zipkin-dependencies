@@ -41,8 +41,8 @@
          See https://github.com/mojohaus/animal-sniffer/issues/62 -->
     <maven.compiler.testRelease>17</maven.compiler.testRelease>
 
-    <!-- Spark 3.4 module config from:
-         https://github.com/apache/spark/blob/branch-3.4/launcher/src/main/java/org/apache/spark/launcher/JavaModuleOptions.java#L29 -->
+    <!-- Spark 3.5 module config from:
+         https://github.com/apache/spark/blob/branch-3.5/launcher/src/main/java/org/apache/spark/launcher/JavaModuleOptions.java#L29 -->
     <maven.test.argLine>
       -XX:+IgnoreUnrecognizedVMOptions
       --add-opens=java.base/java.lang=ALL-UNNAMED
@@ -69,13 +69,13 @@
 
     <!-- Use a common scala binary version, and the highest spark patch. -->
     <scala.binary.version>2.13</scala.binary.version>
-    <spark.version>3.4.2</spark.version>
+    <spark.version>3.5.1</spark.version>
 
     <!-- This dependency is in elasticsearch-hadoop -->
-    <elasticsearch-spark.version>8.14.0-SNAPSHOT</elasticsearch-spark.version>
+    <elasticsearch-spark.version>8.15.0-SNAPSHOT</elasticsearch-spark.version>
 
     <!-- Use latest Cassandra connector matching minor versioned of spark. -->
-    <spark-cassandra-connector.version>3.4.1</spark-cassandra-connector.version>
+    <spark-cassandra-connector.version>3.5.0</spark-cassandra-connector.version>
     <!-- Note: Zipkin uses the Apache java-driver. Watch for the connector to
          change from DataStax to this. -->
     <java-driver.version>4.17.0</java-driver.version>
