@@ -4,7 +4,6 @@
  */
 package zipkin2.dependencies.elasticsearch;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -12,6 +11,7 @@ import javax.annotation.Nullable;
 import org.apache.spark.api.java.function.FlatMapFunction;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import scala.Serializable;
 import scala.Tuple2;
 import zipkin2.DependencyLink;
 import zipkin2.Span;

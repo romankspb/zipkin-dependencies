@@ -19,7 +19,7 @@ are supported, including Cassandra, MySQL and Elasticsearch.
 
 ## Quick-start
 
-Until [SPARK-43831](https://issues.apache.org/jira/browse/SPARK-43831), Zipkin Dependencies requires Java 17 to run.
+Until [SPARK-43831](https://issues.apache.org/jira/browse/SPARK-43831), Zipkin Dependencies requires Java 11 to run.
 
 The quickest way to get started is to fetch the [latest released job](https://search.maven.org/remote_content?g=io.zipkin.dependencies&a=zipkin-dependencies&v=LATEST) as a self-contained jar. For example:
 
@@ -146,7 +146,7 @@ You can use the following command to display what this project is built against:
 ```bash
 $ SPARK_VERSION=$(./mvnw help:evaluate -Dexpression=spark.version -q -DforceStdout)
 $ echo $SPARK_VERSION
-3.5.1
+3.3.4
 ```
 
 Once you've verified your setup is on the correct version, set the `SPARK_MASTER` variable:

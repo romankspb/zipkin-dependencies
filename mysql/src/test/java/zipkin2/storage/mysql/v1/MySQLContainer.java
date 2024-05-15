@@ -24,7 +24,7 @@ final class MySQLContainer extends GenericContainer<MySQLContainer> {
   static final Logger LOGGER = LoggerFactory.getLogger(MySQLContainer.class);
 
   MySQLContainer() {
-    super(parse("ghcr.io/openzipkin/zipkin-mysql:3.3.0"));
+    super(parse("ghcr.io/openzipkin/zipkin-mysql:3.2.1"));
     addExposedPort(3306);
     waitStrategy = Wait.forHealthcheck();
     withLogConsumer(new Slf4jLogConsumer(LOGGER));
@@ -39,8 +39,8 @@ final class MySQLContainer extends GenericContainer<MySQLContainer> {
     final MariaDbDataSource dataSource;
 
     try {
-      dataSource = new MariaDbDataSource(
-        "jdbc:mysql://%s:%s/zipkin?permitMysqlScheme&autoReconnect=true&useUnicode=yes&characterEncoding=UTF-8".formatted(
+      dataSource = new MariaDbDataSource(String.format(
+        "jdbc:mysql://%s:%s/zipkin?permitMysqlScheme&autoReconnect=true&useUnicode=yes&characterEncoding=UTF-8",
         host(), port()));
       dataSource.setUser("zipkin");
       dataSource.setPassword("zipkin");
